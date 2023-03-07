@@ -1,0 +1,262 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taleem</title>
+
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"
+            rel="stylesheet"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+    />
+
+    {% block link %}
+
+
+    {% endblock %}
+
+    <link rel="stylesheet" href='{% static "/css/index.css"%}'  />
+    <link rel="stylesheet" href='{% static "/css/login.css"%}'  />
+</head>
+<body>
+
+
+<nav
+        class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900"
+>
+    <div
+            class="container flex flex-wrap items-center justify-between mx-auto"
+    >
+        <a href="/" class="flex items-center">
+            <img
+                    src='{% static "/images/logo.svg"%}'
+                    class="h-6 mr-3 sm:h-9"
+                    alt="Flowbite Logo"
+            />
+            <span
+                    class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+            ></span
+            >
+        </a>
+        <div class="flex md:order-2">
+
+            <div class="relative hidden md:block">
+                <div
+                        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                    <svg
+                            class="w-5 h-5 text-gray-500"
+                            aria-hidden="true"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                                fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd"
+                        ></path>
+                    </svg>
+                </div>
+
+            </div>
+            <button
+                    data-collapse-toggle="navbar-search"
+                    type="button"
+                    class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-search"
+                    aria-expanded="false"
+            >
+                <span class="sr-only">Open menu</span>
+                <svg
+                        class="w-6 h-6"
+                        aria-hidden="true"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                            fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"
+                    ></path>
+                </svg>
+            </button>
+        </div>
+        <div
+                class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+                id="navbar-search"
+        >
+
+            <ul
+                    class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+                <li class="nav-link">
+                    <a
+                            href="{% url 'Feed' %}"
+                            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                            aria-current="page"
+                    >Feed</a
+                    >
+                </li>
+                <li class="nav-link">
+                    <a
+                            href="#"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    >Donate</a
+                    >
+                </li>
+                <li class="disappear-nav-add-btn">
+                    <a
+                            style="
+                  padding: 10px 15px;
+                  border: 1px solid black;
+                  border-radius: 15px;
+                "
+                            href="{% url 'QuestionsCreationView' %}"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    ><i class="fa-regular fa-plus"></i>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a
+                            href="{% url 'profile' %}"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    >Profile</a
+                    >
+                </li>
+                <li class="nav-link">
+                    <a
+                            href="{% url "book" %}"
+                            class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                    >Books</a
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Navbar -->
+<div class="r-bbutton">
+    <div data-dial-init class="fixed right-6 bottom-6 group">
+        <div
+                id="speed-dial-menu-default"
+                class="flex flex-col items-center hidden mb-4 space-y-2"
+        >
+            <button
+                    type="button"
+                    data-tooltip-target="tooltip-share"
+                    data-tooltip-placement="left"
+                    class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 shadow-sm dark:hover:text-white dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400"
+            >
+                <svg
+                        aria-hidden="true"
+                        class="w-6 h-6 -ml-px"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                            d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"
+                    ></path>
+                </svg>
+                <span class="sr-only">Share</span>
+            </button>
+            <div
+                    id="tooltip-share"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            >
+                Share
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+            <button
+                    type="button"
+                    data-tooltip-target="tooltip-copy"
+                    data-tooltip-placement="left"
+                    class="flex justify-center items-center w-[52px] h-[52px] text-gray-500 hover:text-gray-900 bg-white rounded-full border border-gray-200 dark:border-gray-600 dark:hover:text-white shadow-sm dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none dark:focus:ring-gray-400"
+            >
+                <svg
+                        aria-hidden="true"
+                        class="w-6 h-6"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                            d="M7 9a2 2 0 012-2h6a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2V9z"
+                    ></path>
+                    <path
+                            d="M5 3a2 2 0 00-2 2v6a2 2 0 002 2V5h8a2 2 0 00-2-2H5z"
+                    ></path>
+                </svg>
+                <span class="sr-only">Create Question</span>
+            </button>
+            <div
+                    id="tooltip-copy"
+                    role="tooltip"
+                    class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+            >
+                Create Question
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+        </div>
+
+        <button
+                type="button"
+                data-dial-toggle="speed-dial-menu-default"
+                aria-controls="speed-dial-menu-default"
+                aria-expanded="false"
+                class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+        >
+            <svg
+                    aria-hidden="true"
+                    class="w-8 h-8 transition-transform group-hover:rotate-45"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+                ></path>
+            </svg>
+            <span class="sr-only">Open actions menu</span>
+        </button>
+    </div>
+</div>
+
+<!-- Navbar -->
+
+{% block content %}
+
+
+{% endblock %}
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
+</html>

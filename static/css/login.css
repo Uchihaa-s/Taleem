@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+}
+body .form-container {
+  margin: 100px auto;
+  width: 500px;
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+body .form-container .form-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 760px) {
+  body .form-container {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  body .form-container {
+    margin: 150px auto;
+    width: 300px;
+  }
+}/*# sourceMappingURL=login.css.map */

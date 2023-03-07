@@ -1,0 +1,48 @@
+{% load static %}
+{% block link %}
+    <link href={% static "/css/book.css"%} rel="stylesheet" />
+{% endblock %}
+{% block content %}
+    <ul class="cards">
+
+    {% for book in object_list %}
+
+        {% if forloop.counter0|divisibleby:3 %}
+            </ul>
+            <ul class="cards">
+        {% endif %}
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image">
+                    <img src="https://picsum.photos/500/300/?image=10" />
+                </div>
+                <div class="card_content">
+                    <h2 class="card_title">Book</h2>
+                    <p class="card_text">
+                        {{ book.Tittle }}
+                    </p>
+                    <a href="{{ book.book.url}}"><button class="btn card_btn">Read More</button></a>
+                </div>
+            </div>
+        </li>
+
+    {% endfor %}
+        </ul>
+    <ul class="cards">
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image">
+                    <img src="https://picsum.photos/500/300/?image=10" />
+                </div>
+                <div class="card_content">
+                    <h2 class="card_title">Book</h2>
+                    <p class="card_text">
+                        Demo of pixel perfect pure CSS simple responsive card grid
+                        layout
+                    </p>
+                    <button class="btn card_btn">Read More</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% if form.errors %}
+        <p>Some Error in data</p>
+        {{ form.errors }}
+    {% endif %}
+    <div class="form-container">
+        <h2 class="form-title">Answer form</h2>
+    <form method="post" action="{% url 'answer_view' pk %}">
+        {% csrf_token %}
+
+
+            <div class="mb-6">
+            {{ form.text.label_tag }}
+                {{ form.text }}
+            </div>
+            <div class="mb-6">
+                {{ form.video.label_tag }}
+                {{ form.video }}
+            </div>
+            <div class="mb-6">
+                {{ form.image.label_tag }}
+                {{ form.image }}
+            </div>
+            <div class="mb-6">
+                {{ form.docs.label_tag }}
+                {{ form.docs }}
+            </div>
+
+        <input type="hidden" name="question" value="{{ pk }}">
+        <input type="hidden" name="user" value="{{user.id}}">
+
+        <input type="submit" value="submit"
+               class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+
+    </form>
+    </div>
+{% endblock %}

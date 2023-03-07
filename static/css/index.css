@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+.nav-link {
+  margin-top: 10px;
+}
+
+.r-bbutton {
+  display: none;
+}
+
+.placeholder {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-size: 30px;
+}
+
+.landing-section {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 50px;
+}
+.landing-section .landing-text-container {
+  width: 50%;
+  padding-left: 20px;
+}
+.landing-section .landing-text-container .landing-text {
+  font-size: 100px;
+  font-family: "Montserrat", sans-serif;
+}
+.landing-section .landing-text-container .landing-btn {
+  padding: 10px 15px;
+  background-color: #e7bef5;
+}
+.landing-section .landing-img-container {
+  width: 50%;
+  height: 100%;
+  background-color: #e7bef5;
+}
+
+@media only screen and (max-width: 760px) {
+  .disappear-nav-add-btn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .r-bbutton {
+    display: list-item;
+  }
+}/*# sourceMappingURL=index.css.map */

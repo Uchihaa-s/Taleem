@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+body .page-container {
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 50px;
+}
+body .page-container .question {
+    font-size: 30px;
+    font-weight: 500;
+}
+body .page-container hr {
+    width: 50%;
+    margin: 10px auto;
+}
+body .page-container .answer-text {
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    margin: 15px auto;
+}
+body .page-container .discussion-container .discussion-title {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    color: gray;
+    text-align: center;
+    margin-top: 50px;
+}
+body .page-container .discussion-container ul li {
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.153);
+    margin: 10px 10px 10px 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+body .page-container .discussion-container ul li .chat-message {
+    font-size: 14px;
+}
+body .page-container .discussion-container ul li .sender {
+    font-size: 8px;
+    margin-top: 5px;
+}
+body .page-container .discussion-container .chat-send-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gray;
+}
+body .page-container .discussion-container .chat-send-container .chat-input {
+    border: none;
+    outline: none;
+    width: 90%;
+}
+body .page-container .discussion-container .chat-send-container .chat-input :hover,
+body .page-container .discussion-container .chat-send-container .chat-input :focus {
+    outline: none;
+}
+body .page-container .discussion-container .chat-send-container .chat-send-icon-container {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+body .page-container .evaluate-container {
+    margin: 40px 0;
+    height: 10px;
+}
+body .page-container .evaluate-container button {
+    float: right;
+}
+
+.nav-link {
+    margin-top: 10px;
+}
+
+.r-bbutton {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    body .page-container {
+        padding: 30px;
+    }
+}
+@media only screen and (max-width: 760px) {
+    .disappear-nav-add-btn {
+        display: none;
+    }
+}
+@media only screen and (max-width: 426px) {
+    body .page-container {
+        padding: 10px;
+    }
+    body .page-container .question {
+        font-size: 20px;
+    }
+    body .page-container .answer-text {
+        font-size: 16px;
+    }
+}/*# sourceMappingURL=answer.css.map */
